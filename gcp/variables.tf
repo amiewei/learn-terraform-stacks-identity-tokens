@@ -1,22 +1,23 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-variable "google_project" {
-  type = string
+variable "gcp_project_id" {
+  description = "GCP Project ID."
+  type        = string
 }
 
-variable "google_region" {
-  type = string
+variable "hcp_organization_name" {
+  description = "Organization name for the trust relationship."
+  type        = string
 }
 
-variable "tfc_organization" {
-  type = string
+variable "hcp_project_name" {
+  description = "Project name for the trust relationship."
+  type        = string
 }
 
-variable "tfc_project" {
-  type = string
-}
-
-variable "tfc_stack" {
-  type = string
+variable "hcp_hostname" {
+  description = "Hostname of HCP Terraform or Terraform Enterprise."
+  type        = string
+  default     = "app.terraform.io"
 }
